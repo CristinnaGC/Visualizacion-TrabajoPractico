@@ -1,3 +1,85 @@
-h1, h2 {
-  font-family: Lato;
+:root {
+  --primary: #E9A809;
+  --acolor: #ffffff;
+  --bcolor: #dadada;
+  --ccolor: #242424;
+  --dcolor: #000000;
+}
+
+:root[data-theme="dark"] {
+  --primary: #E9A809;
+  --acolor: #000000;
+  --bcolor: #242424;
+  --ccolor: #dadada;
+  --dcolor: #ffffff;
+}
+
+/* Para todo el cuerpo del documento */
+body {
+    max-height: 100vh;
+    font-size: 18px;
+    font-family: Calibri Light, sans-serif;
+    background-color: var(--acolor);
+    color: var(--ccolor);
+}
+    
+
+/* Botones para cambiar tema */
+.cambiar-tema {
+  position: absolute;
+  right: 70px;
+  top: 70px;
+}
+
+.cambiar-tema #btn-light {
+  display: none;
+}
+
+.cambiar-tema .btn {
+  margin: 0px;
+  background-color: transparent;
+  border: none;
+}
+
+.cambiar-tema .btn i {
+  color: var(--primary);
+  font-size: 25px;
+  transition: 0.1s;
+}
+
+.cambiar-tema button i:hover {
+  color: var(--primary);
+  transform: scale(1.2);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Contenido */
+section {
+   max-width: 800px;
+   height: 100%;
+   margin: 15% auto 0 auto;
+}
+
+section h1 {
+  color: var(--dcolor);
+  font-size: 45px;
+}
+
+section .text-primary {
+  color: var(--primary);
+}
+
+/* Enlace principal */
+a.primary-link {
+background-color: var(--primary);
+padding: 5px 15px;
+border-radius: 30px;
+}
+
+a.primary-link:hover {
+background-color: var(--primary);
+color: #ffffff;
 }
